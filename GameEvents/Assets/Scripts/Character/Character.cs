@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private float currency = default;
+    public float Currency => currency;
 
-    // Update is called once per frame
-    void Update()
+    //normally put this in a processor but for this example I'll leave it here
+    public void AddCurrency()
     {
-        
+        currency++;
     }
 }

@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool DoorStatus;
+
+    public void OpenedDoor()
     {
-        
+        if (!DoorStatus)
+        Debug.Log("The Door was Opened");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        DoorStatus = false;
     }
 }
