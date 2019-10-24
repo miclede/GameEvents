@@ -16,11 +16,11 @@ public class Processor_Event : ScriptableObject
 
     CharacterEvent CharEvent = new CharacterEvent();
 
-    public void GetReward(GameEventListener listener)
+    public void GetReward(Character character, GameEvent gameEvent)
     {
-        CharEvent.Character = listener.GetComponentInParent<Character>();
+        CharEvent.Character = character;
 
-        CharEvent.GameEvent = listener.GameEvent;
+        CharEvent.GameEvent = gameEvent;
 
         SendReward(CharEvent.Character, CharEvent.GameEvent);
     }

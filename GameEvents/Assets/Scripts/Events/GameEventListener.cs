@@ -1,26 +1,40 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class GameEventListener : MonoBehaviour
 {
-    [SerializeField]
-    private GameEvent gameEvent = default;
-    public GameEvent GameEvent => gameEvent;
+    [System.Serializable]
+    public struct EventListenReponse
+    {
+        public GameEvent GameEvent;
 
-    public UnityEvent Response;
+        public UnityEvent Response;
+    }
+
+    public List<EventListenReponse> GameEvent_Listeners = new List<EventListenReponse>();
 
     private void OnEnable()
     {
-        GameEvent.RegisterListener(this);
+        foreach(EventListenReponse lR in GameEvent_Listeners)
+        {
+            lR.GameEvent.RegisterListener(this);
+        }
     }
 
     private void OnDisable()
     {
-        GameEvent.UnRegisterListener(this);
+        foreach (EventListenReponse lR in GameEvent_Listeners)
+        {
+            lR.GameEvent.UnRegisterListener(this);
+        }
     }
 
     public void OnEventRaised()
     {
-        Response.Invoke();
+        foreach (EventListenReponse lR in GameEvent_Listeners)
+        {
+            lR.Response.Invoke();
+        }
     }
 }
