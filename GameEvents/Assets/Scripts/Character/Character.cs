@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 
+//Simulate a character
 public class Character : MonoBehaviour
 {
     [SerializeField]
     private float currency = default;
     public float Currency => currency;
 
-    //normally put this in a processor but for this example I'll leave it here
+    //not good practice to have this here but its just an example
+    //AddCurrency called from an ItemReward ScriptableObject
     public void AddCurrency(float quantity)
     {
         currency += quantity;

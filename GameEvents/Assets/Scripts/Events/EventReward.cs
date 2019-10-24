@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//EventReward Disctionary has a list of these
+//Other rewards will inherit from this ie. Item, Experience, Money, Repuation
 public abstract class EventReward : ScriptableObject
 {
     [SerializeField]
@@ -9,6 +11,7 @@ public abstract class EventReward : ScriptableObject
     public virtual void RewardCharacter(Character character)
     {    }
 
+//add to rewards dictionary through context menu instead of dragging in
 #if UNITY_EDITOR
     [ContextMenu("Add To Rewards Dictionary")]
     void AddToRewards()

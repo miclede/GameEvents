@@ -4,19 +4,21 @@ using UnityEngine.Events;
 
 public class GameEventListener : MonoBehaviour
 {
+    //struct that ties a GameEvent and Response together
     [System.Serializable]
-    public struct EventListenReponse
+    public struct GameEventReponse
     {
         public GameEvent GameEvent;
 
         public UnityEvent Response;
     }
 
-    public List<EventListenReponse> GameEvent_Listeners = new List<EventListenReponse>();
+    //List of GameEvents and Responses that are tied together in a struct
+    public List<GameEventReponse> GameEvent_Responses = new List<GameEventReponse>();
 
     private void OnEnable()
     {
-        foreach(EventListenReponse lR in GameEvent_Listeners)
+        foreach(GameEventReponse lR in GameEvent_Responses)
         {
             lR.GameEvent.RegisterListener(this);
         }
@@ -24,15 +26,16 @@ public class GameEventListener : MonoBehaviour
 
     private void OnDisable()
     {
-        foreach (EventListenReponse lR in GameEvent_Listeners)
+        foreach (GameEventReponse lR in GameEvent_Responses)
         {
             lR.GameEvent.UnRegisterListener(this);
         }
     }
 
+    //when an event is raised check which event it is and then invoke the response tied to it
     public void OnEventRaised(GameEvent gameEvent)
     {
-        foreach (EventListenReponse lR in GameEvent_Listeners)
+        foreach (GameEventReponse lR in GameEvent_Responses)
         {
             if (lR.GameEvent == gameEvent)
             lR.Response.Invoke();

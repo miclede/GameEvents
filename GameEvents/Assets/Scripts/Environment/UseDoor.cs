@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 
+//simulate something happening related to events
+//open and close a door while triggering pay events
+//press E on keyboard to open, close, and recieve 1 / 5 currency
 public class UseDoor : MonoBehaviour
 {
     private bool DoorStatus;
 
+    //events to raise filled in inspector
     public GameEvent AEvent;
     public GameEvent BEvent;
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//used for this example to raise events with the E key
 public class RaiseOnInteract : MonoBehaviour
 {
     [SerializeField]
@@ -14,7 +15,7 @@ public class RaiseOnInteract : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         InteractEvent();
     }

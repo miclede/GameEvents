@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b243309a04541748a5043baaf38b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameEvent_Listeners:
+  GameEvent_Responses:
   - GameEvent: {fileID: 11400000, guid: e7e8cf4af5b5c8142b323663c9947204, type: 2}
     Response:
       m_PersistentCalls:
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b243309a04541748a5043baaf38b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameEvent_Listeners:
+  GameEvent_Responses:
   - GameEvent: {fileID: 11400000, guid: 1147d55fc09e41b40a8cc096588576f7, type: 2}
     Response:
       m_PersistentCalls:
