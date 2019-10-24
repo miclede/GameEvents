@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca3455915ab4f149a520a08ae17d4b5, type: 3}
   m_Name: Event Processor
   m_EditorClassIdentifier: 
-  rewardDictionary: {fileID: 0}
+  rewardDictionary: {fileID: 11400000, guid: ebebf344e088d254ea8babffcc953e79, type: 2}

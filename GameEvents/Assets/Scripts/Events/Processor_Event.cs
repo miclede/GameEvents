@@ -22,16 +22,16 @@ public class Processor_Event : ScriptableObject
 
         CharEvent.GameEvent = listener.GameEvent;
 
-        sendReward(CharEvent.Character, CharEvent.GameEvent);
+        SendReward(CharEvent.Character, CharEvent.GameEvent);
     }
 
-    void sendReward(Character character, GameEvent gameEvent)
+    void SendReward(Character character, GameEvent gameEvent)
     {
-        for (int i = 0; i < rewardDictionary.Rewards.Count; i++)
+        for (int i = 0; i < RewardDictionary.Rewards.Count; i++)
         {
-            if(rewardDictionary.Rewards[i].GameEvent == gameEvent)
+            if(RewardDictionary.Rewards[i].GameEvent == gameEvent)
             {
-                rewardDictionary.Rewards[i].RewardCharacter(character);
+                RewardDictionary.Rewards[i].RewardCharacter(character);
             }
         }
     }

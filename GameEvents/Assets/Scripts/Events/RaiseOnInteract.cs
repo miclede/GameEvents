@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RaiseOnInteract : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameEvent gameEvent = default;
+    public GameEvent GameEvent => gameEvent;
 
-    // Update is called once per frame
-    void Update()
+    public void InteractEvent()
     {
-        
+        if (Input.GetKey(KeyCode.E))
+        {
+            GameEvent.Raise();
+        }
     }
 }

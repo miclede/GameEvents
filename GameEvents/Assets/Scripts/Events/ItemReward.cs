@@ -9,7 +9,7 @@ public class ItemReward : EventReward
 
     public override void RewardCharacter(Character character)
     {
-        character.AddCurrency(amount);
-        Debug.Log("Character was rewarded: " + amount);
+        character.AddCurrency(Amount);
+        Debug.Log("Character was rewarded: " + Amount);
     }
 }
