@@ -1,18 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Processor_Event : MonoBehaviour
+[CreateAssetMenu(fileName = "Event Processor", menuName = "Events/Processor")]
+public class Processor_Event : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private EventRewardDictionary rewardDictionary = default;
+    public EventRewardDictionary RewardDictionary => rewardDictionary;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

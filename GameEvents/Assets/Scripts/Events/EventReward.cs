@@ -13,7 +13,12 @@ public abstract class EventReward : ScriptableObject
     [ContextMenu("Add To Rewards Dictionary")]
     void AddToRewards()
     {
-        
+        EventRewardDictionary rewardDictionary =
+            (EventRewardDictionary)UnityEditor.AssetDatabase.LoadAssetAtPath
+            ("Assets/ScriptableObjects/Events/Event Rewards Dictionary.asset", typeof(EventRewardDictionary));
+
+        if (rewardDictionary != null)
+            rewardDictionary.Add(this);
     }
 #endif
 }
