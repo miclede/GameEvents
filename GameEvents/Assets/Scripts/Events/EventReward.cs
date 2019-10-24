@@ -3,7 +3,7 @@
 public abstract class EventReward : ScriptableObject
 {
     [SerializeField]
-    private GameEvent gameEvent;
+    private GameEvent gameEvent = default;
     public GameEvent GameEvent => gameEvent;
 
     public virtual void RewardCharacter(Character character)
