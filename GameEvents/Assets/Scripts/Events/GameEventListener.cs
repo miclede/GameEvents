@@ -30,10 +30,11 @@ public class GameEventListener : MonoBehaviour
         }
     }
 
-    public void OnEventRaised()
+    public void OnEventRaised(GameEvent gameEvent)
     {
         foreach (EventListenReponse lR in GameEvent_Listeners)
         {
+            if (lR.GameEvent == gameEvent)
             lR.Response.Invoke();
         }
     }

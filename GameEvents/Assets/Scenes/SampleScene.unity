@@ -322,21 +322,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b243309a04541748a5043baaf38b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: e7e8cf4af5b5c8142b323663c9947204, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1201487608}
-        m_MethodName: UsedDoor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  GameEvent_Listeners:
+  - GameEvent: {fileID: 11400000, guid: e7e8cf4af5b5c8142b323663c9947204, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1201487608}
+          m_MethodName: UsedDoor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1201487608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,6 +350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce38e712aef4464f90a77f437e24dc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AEvent: {fileID: 11400000, guid: 1147d55fc09e41b40a8cc096588576f7, type: 2}
+  BEvent: {fileID: 11400000, guid: be3d7486c1476b849b98a2b70b51dbcd, type: 2}
 --- !u!4 &1201487609
 Transform:
   m_ObjectHideFlags: 0
@@ -407,7 +410,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b243309a04541748a5043baaf38b83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 1147d55fc09e41b40a8cc096588576f7, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls: []
+  GameEvent_Listeners:
+  - GameEvent: {fileID: 11400000, guid: 1147d55fc09e41b40a8cc096588576f7, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 95821c5c85d82514c8a35fa5dd592eb2, type: 2}
+          m_MethodName: getCharacter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1049615188}
+            m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 95821c5c85d82514c8a35fa5dd592eb2, type: 2}
+          m_MethodName: getGameEvent
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 1147d55fc09e41b40a8cc096588576f7,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: GameEvent, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 95821c5c85d82514c8a35fa5dd592eb2, type: 2}
+          m_MethodName: SendReward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - GameEvent: {fileID: 11400000, guid: be3d7486c1476b849b98a2b70b51dbcd, type: 2}
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 95821c5c85d82514c8a35fa5dd592eb2, type: 2}
+          m_MethodName: getCharacter
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1049615188}
+            m_ObjectArgumentAssemblyTypeName: Character, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 95821c5c85d82514c8a35fa5dd592eb2, type: 2}
+          m_MethodName: getGameEvent
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: be3d7486c1476b849b98a2b70b51dbcd,
+              type: 2}
+            m_ObjectArgumentAssemblyTypeName: GameEvent, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 11400000, guid: 95821c5c85d82514c8a35fa5dd592eb2, type: 2}
+          m_MethodName: SendReward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

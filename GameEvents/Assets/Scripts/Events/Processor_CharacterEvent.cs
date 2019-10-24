@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "Event Processor", menuName = "Events/Processor")]
-public class Processor_Event : ScriptableObject
+[CreateAssetMenu(fileName = "Character Event Processor", menuName = "Events/CharacterEventProcessor")]
+public class Processor_CharacterEvent : ScriptableObject
 {
     [SerializeField]
     private EventRewardDictionary rewardDictionary = default;
@@ -16,22 +16,23 @@ public class Processor_Event : ScriptableObject
 
     CharacterEvent CharEvent = new CharacterEvent();
 
-    public void GetReward(Character character, GameEvent gameEvent)
+    public void getCharacter(Character character)
     {
         CharEvent.Character = character;
-
-        CharEvent.GameEvent = gameEvent;
-
-        SendReward(CharEvent.Character, CharEvent.GameEvent);
     }
 
-    void SendReward(Character character, GameEvent gameEvent)
+    public void getGameEvent(GameEvent gameEvent)
+    {
+        CharEvent.GameEvent = gameEvent;
+    }
+
+    public void SendReward()
     {
         for (int i = 0; i < RewardDictionary.Rewards.Count; i++)
         {
-            if(RewardDictionary.Rewards[i].GameEvent == gameEvent)
+            if(RewardDictionary.Rewards[i].GameEvent == CharEvent.GameEvent)
             {
-                RewardDictionary.Rewards[i].RewardCharacter(character);
+                RewardDictionary.Rewards[i].RewardCharacter(CharEvent.Character);
             }
         }
     }
