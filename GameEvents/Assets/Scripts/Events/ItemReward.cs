@@ -1,18 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ItemReward : MonoBehaviour
+public class ItemReward : EventReward
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private float amount = default;
+    public float Amount => amount;
 
-    // Update is called once per frame
-    void Update()
+    public override void RewardCharacter(Character character)
     {
-        
+        character.AddCurrency(amount);
+        Debug.Log("Character was rewarded: " + amount);
     }
 }

@@ -7,8 +7,8 @@ public class Character : MonoBehaviour
     public float Currency => currency;
 
     //normally put this in a processor but for this example I'll leave it here
-    public void AddCurrency()
+    public void AddCurrency(float quantity)
     {
-        currency++;
+        currency += quantity;
     }
 }
