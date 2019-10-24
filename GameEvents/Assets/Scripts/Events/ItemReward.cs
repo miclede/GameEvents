@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[CreateAssetMenu(menuName = "Rewards/ItemReward")]
 public class ItemReward : EventReward
 {
     [SerializeField]
