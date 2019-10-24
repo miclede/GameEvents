@@ -19,6 +19,7 @@ public class Processor_CharacterEvent : ScriptableObject
     CharacterEvent CharEvent = new CharacterEvent();
 
     //this needs to be set to the Character that will recieve the reward
+    //this can be changed both in code and in the inspector
     public void getCharacter(Character character)
     {
         CharEvent.Character = character;
