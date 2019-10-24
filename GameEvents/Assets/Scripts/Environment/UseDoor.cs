@@ -12,14 +12,14 @@ public class UseDoor : MonoBehaviour
             Debug.Log("The Door was Opened.");
         }
 
-        if (DoorStatus)
+        else if (DoorStatus)
         {
             DoorStatus = false;
             Debug.Log("The Door was Closed.");
         }
     }
 
-    private void Awake()
+    private void Start()
     {
         DoorStatus = false;
     }

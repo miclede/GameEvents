@@ -8,9 +8,14 @@ public class RaiseOnInteract : MonoBehaviour
 
     public void InteractEvent()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            GameEvent.Raise();
+            GameEvent.Raise();  
         }
+    }
+
+    private void FixedUpdate()
+    {
+        InteractEvent();
     }
 }

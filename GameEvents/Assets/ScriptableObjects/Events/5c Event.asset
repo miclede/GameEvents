@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e5ce880d3a0ab042a603ba64d0061dd, type: 3}
-  m_Name: Event Rewards Dictionary
+  m_Script: {fileID: 11500000, guid: ea430a76a7c8dbe4bbd425cf7d4eff2a, type: 3}
+  m_Name: 5c Event
   m_EditorClassIdentifier: 
-  Rewards:
-  - {fileID: 11400000, guid: 1b568d13eb102f74aa671c9bbd202da7, type: 2}
-  - {fileID: 11400000, guid: c8b3bbf356ea279449735f184ee35dfb, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4361cce7262114d9f71dfb605158b7, type: 3}
   m_Name: 1c
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 0}
-  amount: 0
+  gameEvent: {fileID: 11400000, guid: 1147d55fc09e41b40a8cc096588576f7, type: 2}
+  amount: 1
