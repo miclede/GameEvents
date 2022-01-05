@@ -33,5 +33,3 @@ A faster summary once you have the infrastracture in place for the character is:
 2. Add a Listener for the GameEvent
 3. Setup the Listener for the Character and GameEvent
 4. Raise the Event
-
-There is alot you can do with this system and some simple setup.
