@@ -28,7 +28,7 @@ For a Character reward based GameEvent:
 10. Attach function SendReward to the last slot on the Game Event Listener
 11. Raise the event and watch it all come together
 
-A faster summary once you have the infrastracture in place for the character is:
+A faster summary once you have the infrastracture in place:
 1. Create GameEvent
 2. Add a Listener for the GameEvent
 3. Setup the Listener for the Character and GameEvent
