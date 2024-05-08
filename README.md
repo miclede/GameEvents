@@ -3,8 +3,6 @@ A game event system that stores events and event rewards inside of ScriptableObj
 
 Based off of the Unite 2017 Austin talk.
 
-Take a Look around the project for details.
-
 The example in the project is triggering a simple event and also for rewarding a Character based on an event being triggered.
 
 For a non-reward GameEvent:
